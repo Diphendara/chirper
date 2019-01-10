@@ -24,6 +24,9 @@ class ChirpsController < ApplicationController
   end
 
   def destroy
+    @chirp = Chirp.find(params[:id])
+    @chirp.destroy
+    redirect_to chirps_path
   end
 
   def chirp_params
