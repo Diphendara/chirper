@@ -1,2 +1,8 @@
 <h1>Chirps#new</h1>
 <p>Find me in app/views/chirps/new.html.erb</p>
+
+<%= form_for(@chirp) do |f| %>
+    <%= f.label :body %> <br>
+    <%= f.text_field :body %>
+    <%= f.submit %>
+<% end %>
