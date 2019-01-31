@@ -2,7 +2,8 @@
 <p>Find me in app/views/chirps/index.html.erb</p>
 
 <% @chirps.each do |chirp| %>
-    <%= chirp.body %> <%= link_to 'Borrar este chirp', chirp_path(chirp.id), method: :delete %> <br>
+    <%= chirp.body %> 
+    <%= link_to 'Borrar este chirp', chirp_path(chirp.id) %> <br>
 <% end %>
 
 <%= link_to 'Crear chirp', new_chirp_path %>
