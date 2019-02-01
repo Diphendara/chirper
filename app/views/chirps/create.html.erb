@@ -1,2 +1,6 @@
 <h1>Chirps#create</h1>
 <p>Find me in app/views/chirps/create.html.erb</p>
+
+<% @chirp.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+<% end %>

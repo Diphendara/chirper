@@ -11,7 +11,9 @@ class ChirpsController < ApplicationController
     @chirp = Chirp.create(chirp_params)
     @chirp.user_id = current_user.id
     @chirp.save
-    redirect_to chirps_path
+    if !@chirp.errors.any? 
+      redirect_to chirps_path
+    end
   end
 
   def edit
